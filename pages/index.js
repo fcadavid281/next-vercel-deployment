@@ -1,28 +1,27 @@
-import Head from 'next/head'
+import { MainLayout } from '@/Components/layouts/MainLayout'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Fabian Cadavid</title>
-        <meta name="description" content="Home App" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default function Home(props) {
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Ir a <a style={{ color: 'blueviolet' }} href='/about'>About</a>
-        </h1>
-        <p className={styles.desctipcion} >
-          Get started by editing {''}
-          <code className={styles.code}></code>
-        </p>
-      </main>
-    </>
+  return (
+    <MainLayout>
+      <h1 className={'title'}>
+        Ir a <Link
+          style={{ color: 'gray', textDecorationStyle: 'dashed' }}
+          href='/about'>
+          About
+        </Link>
+        <br />
+      </h1>
+      <p className={'description'} >
+        Get started by editing {''}
+        <code className={'code'}>
+          Hello, I am your friend Fabian, do you speak English or Spanish
+        </code>
+      </p>
+    </MainLayout >
   )
 }
