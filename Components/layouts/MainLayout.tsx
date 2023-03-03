@@ -1,9 +1,10 @@
+// import styles from '../Components/layouts/'
+import styles from "../../Components/layouts/MainLayout.module.css";
+import Head from "next/head";
+import { Navbar } from "../Navbar";
+import { FC } from "react";
 
-import styles from '@/Components/layouts/MainLayout.module.css'
-import Head from 'next/head'
-import { Navbar } from '../Navbar'
-
-export const MainLayout = ({ children }) => {
+export const MainLayout: FC = ({ children }: any) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,12 +15,8 @@ export const MainLayout = ({ children }) => {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <div className={styles.grid}>
-        
-        {children}
-        
-        </div>  
+        <div className={styles.grid}>{children}</div>
       </main>
     </div>
-  )
-}
+  );
+};

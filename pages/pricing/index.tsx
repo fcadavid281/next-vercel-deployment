@@ -1,5 +1,5 @@
 
-import { MainLayout } from '@/Components/layouts/MainLayout'
+import { MainLayout } from '../../Components/layouts/MainLayout';
 import Link from 'next/link'
 import React from 'react'
 
